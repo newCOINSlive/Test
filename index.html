@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>A Special Question</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    <div class="light-leaks"></div>
+    <canvas id="particleCanvas"></canvas>
+
+    <main class="ui-wrapper">
+        <section id="questionSection">
+            <h1 class="main-title">Can you be my <span class="highlight">Valentine?</span></h1>
+            
+            <div class="button-group">
+                <button id="yesBtn" class="btn btn-yes">Yes</button>
+                <button id="noBtn" class="btn btn-no">No</button>
+            </div>
+            <p id="whisperText" class="whisper">That wasn’t really an option 😌</p>
+        </section>
+
+        <section id="celebrationSection" class="hidden">
+            <h2 class="yay-text">YAYYYYY 💘</h2>
+            <div id="romanticMessage" class="message-container"></div>
+        </section>
+    </main>
+
+    <div class="controls">
+        <button id="musicToggle" class="control-btn" aria-label="Toggle Music">
+            <span class="icon">♪</span>
+        </button>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_731383794e.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
