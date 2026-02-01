@@ -3,40 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>A Special Question</title>
+    <title>VALENTINE QUEST: THE FINAL BOSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="gradient-bg"></div>
-    <div class="light-leaks"></div>
-    <canvas id="particleCanvas"></canvas>
-
-    <main class="ui-wrapper">
-        <section id="questionSection">
-            <h1 class="main-title">Can you be my <span class="highlight">Valentine?</span></h1>
-            
-            <div class="button-group">
-                <button id="yesBtn" class="btn btn-yes">Yes</button>
-                <button id="noBtn" class="btn btn-no">No</button>
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+    
+    <div id="game-container">
+        <canvas id="particleCanvas"></canvas>
+        
+        <div class="ui-layer" id="main-ui">
+            <div id="status-bar">
+                <div class="pixel-text">BOSS HP: <span id="hp-hearts">❤️❤️❤️</span></div>
+                <div class="pixel-text" id="boss-name">NO_ENTITY_EXE</div>
             </div>
-            <p id="whisperText" class="whisper">That wasn’t really an option 😌</p>
-        </section>
 
-        <section id="celebrationSection" class="hidden">
-            <h2 class="yay-text">YAYYYYY 💘</h2>
-            <div id="romanticMessage" class="message-container"></div>
-        </section>
-    </main>
+            <div class="quest-box">
+                <h1 class="pixel-text main-query">CAN YOU BE MY VALENTINE?</h1>
+            </div>
 
-    <div class="controls">
-        <button id="musicToggle" class="control-btn" aria-label="Toggle Music">
-            <span class="icon">♪</span>
-        </button>
+            <div class="button-arena">
+                <button id="yesBtn" class="pixel-button">YES</button>
+                <button id="noBtn" class="pixel-button no-btn">NO</button>
+            </div>
+        </div>
+
+        <div id="death-screen" class="hidden">
+            <div class="death-msg">Nice Try!</div>
+            <div class="pixel-text" style="margin-top:20px;">BOSS REGENERATING...</div>
+        </div>
+
+        <div id="victory-screen" class="hidden">
+            <div class="victory-banner">
+                <div class="popper left">🎉</div>
+                <div class="popper right">🎉</div>
+                <h2 class="pixel-text">QUEST COMPLETE! 💖</h2>
+                <p class="pixel-text sub-text">YOU WON MY HEART</p>
+            </div>
+        </div>
+        
+        <div id="audio-control" class="pixel-text">🎵 CLICK TO ENABLE AUDIO</div>
     </div>
-
-    <audio id="bgMusic" loop>
-        <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_731383794e.mp3" type="audio/mpeg">
-    </audio>
 
     <script src="script.js"></script>
 </body>
